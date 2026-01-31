@@ -1,0 +1,73 @@
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+
+.idea/
+*.swp
+*.swo
+*.log
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Node / NPM
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Backend
+backend/node_modules/
+backend/.env
+backend/logs/
+backend/*.log
+
+# Frontend (Vite / React)
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.*
+frontend/.vite/
+
+# Build outputs
+dist/
+build/
+
+# Coverage / Tests
+coverage/
+.nyc_output/
+
+# Cache
+.cache/
+.eslintcache
+
+# Temporary / uploads
+tmp/
+temp/
+uploads/
+
+# Database dumps / backups
+*.bak
+*.dump
+*.gz
+*.zip
+
+# Security
+*.pem
+*.key
+*.crt
+
+# Misc
+*.pid
+*.seed
+*.tgz
