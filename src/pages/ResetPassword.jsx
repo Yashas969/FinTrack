@@ -14,31 +14,62 @@ const ResetPassword = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
+        // Log to help debug
+        const logSession = (s) => console.log("Recovery session:", s);
+
         const checkSession = async () => {
             try {
+                // 1. Check initial session
                 const { data: { session }, error } = await supabase.auth.getSession();
                 if (error) throw error;
 
+                logSession(session);
+
                 if (session) {
                     setSessionValid(true);
+                    setCheckingSession(false);
                 } else {
-                    // Start a listener because sometimes the session is set slightly after mount via hash handling
-                    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
-                        if (session) {
-                            setSessionValid(true);
-                        }
-                    });
-                    return () => subscription.unsubscribe();
+                    // 2. If no immediate session, check if we have a hash to parse
+                    const hash = window.location.hash;
+                    const hasRecoveryHash = hash && (hash.includes('type=recovery') || hash.includes('access_token'));
+
+                    if (!hasRecoveryHash) {
+                        setCheckingSession(false);
+                        return; // No session, no hash -> definitely invalid
+                    }
+
+                    // 3. If hash exists, wait for Supabase to process it
                 }
             } catch (err) {
                 console.error("Session check error:", err);
-                setError("Unable to verify reset session. Please try the link again.");
-            } finally {
                 setCheckingSession(false);
             }
         };
 
         checkSession();
+
+        // 4. Listen for auth state changes (crucial for hash processing)
+        const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
+            logSession(session);
+            if (event === 'PASSWORD_RECOVERY' || session) {
+                setSessionValid(true);
+                setCheckingSession(false);
+            }
+        });
+
+        // 5. Fallback timeout: If we are still checking after 4 seconds, verify state one last time and stop
+        const timeout = setTimeout(async () => {
+            const { data: { session } } = await supabase.auth.getSession();
+            if (session) {
+                setSessionValid(true);
+            }
+            setCheckingSession(false);
+        }, 4000);
+
+        return () => {
+            subscription.unsubscribe();
+            clearTimeout(timeout);
+        };
     }, []);
 
     const handleSubmit = async (e) => {
