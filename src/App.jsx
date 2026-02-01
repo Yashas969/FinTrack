@@ -9,6 +9,8 @@ import Dashboard from './pages/Dashboard';
 import Income from './pages/Income';
 import Expense from './pages/Expense';
 import Profile from './pages/Profile';
+import ForgotPassword from './pages/ForgotPassword';
+import ResetPassword from './pages/ResetPassword';
 
 const ProtectedRoute = ({ children }) => {
     const { isAuthenticated, loading } = useAuth();
@@ -27,6 +29,8 @@ function App() {
                 <FinanceProvider>
                     <Routes>
                         <Route path="/login" element={<Login />} />
+                        <Route path="/forgot-password" element={<ForgotPassword />} />
+                        <Route path="/reset-password" element={<ResetPassword />} />
 
                         <Route path="/" element={<ProtectedRoute><Layout /></ProtectedRoute>}>
                             <Route index element={<Navigate to="/home" replace />} />

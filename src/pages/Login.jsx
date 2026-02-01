@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { Wallet, ArrowRight, Mail, Lock, UserPlus, LogIn, Clock, X } from 'lucide-react';
 
@@ -185,7 +185,14 @@ const Login = () => {
                     </div>
 
                     <div>
-                        <label className="block text-sm font-medium text-zinc-400 mb-2">Password</label>
+                        <div className="flex justify-between items-center mb-2">
+                            <label className="block text-sm font-medium text-zinc-400">Password</label>
+                            {!isSignUp && (
+                                <Link to="/forgot-password" className="text-sm text-emerald-500 hover:text-emerald-400 font-medium transition-colors">
+                                    Forgot password?
+                                </Link>
+                            )}
+                        </div>
                         <div className="relative">
                             <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-zinc-500" />
                             <input
