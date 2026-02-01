@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
 import { Wallet, Lock, ArrowRight, AlertCircle, CheckCircle } from 'lucide-react';
+import logo from '../assets/logo.png';
 
 const ResetPassword = () => {
     const [password, setPassword] = useState('');
@@ -60,9 +61,11 @@ const ResetPassword = () => {
         <div className="min-h-screen flex items-center justify-center bg-zinc-950 p-4 animate-in fade-in duration-500">
             <div className="bg-zinc-900/50 p-8 rounded-2xl shadow-xl w-full max-w-md border border-zinc-800 backdrop-blur-sm">
                 <div className="flex flex-col items-center mb-8">
-                    <div className="w-16 h-16 bg-emerald-500/10 rounded-2xl flex items-center justify-center mb-4 border border-emerald-500/20 shadow-lg shadow-emerald-500/10">
-                        <Wallet className="w-8 h-8 text-emerald-500" />
-                    </div>
+                    <img
+                        src={logo}
+                        alt="FinTrack Logo"
+                        className="w-12 h-12 object-contain mb-4"
+                    />
                     <h1 className="text-3xl font-extrabold text-zinc-100 mb-1 tracking-tight">FinTrack</h1>
                     <p className="text-emerald-500 font-medium text-sm mb-6">Set new password</p>
                 </div>

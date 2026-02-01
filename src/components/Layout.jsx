@@ -1,5 +1,6 @@
 import React from 'react';
-import { Outlet, NavLink, useLocation, useNavigate } from 'react-router-dom';
+import { Outlet, NavLink, useLocation, useNavigate, Link } from 'react-router-dom';
+import logo from '../assets/logo.png';
 import { LayoutDashboard, Wallet, TrendingDown, TrendingUp, User, LogOut, Menu } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import clsx from 'clsx';
@@ -36,12 +37,14 @@ const Layout = () => {
         <div className="flex h-screen bg-zinc-900 overflow-hidden">
             {/* Desktop Sidebar */}
             <aside className="hidden md:flex flex-col w-64 bg-zinc-900 border-r border-zinc-800 h-full p-6">
-                <div className="flex items-center gap-2 px-2 mb-10">
-                    <div className="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center shadow-lg shadow-primary-500/20">
-                        <span className="text-white font-bold text-xl">F</span>
-                    </div>
+                <Link to="/dashboard" className="flex items-center gap-2 px-2 mb-10">
+                    <img
+                        src={logo}
+                        alt="FinTrack Logo"
+                        className="w-12 h-12 object-contain"
+                    />
                     <h1 className="text-2xl font-bold text-zinc-100 tracking-tight">FinTrack</h1>
-                </div>
+                </Link>
 
                 <nav className="flex-1 flex flex-col gap-2">
                     <SidebarItem to="/home" icon={LayoutDashboard} label="Home" />
@@ -66,12 +69,14 @@ const Layout = () => {
             <div className="flex-1 flex flex-col h-full overflow-hidden relative">
                 {/* Mobile Header */}
                 <header className="md:hidden h-16 bg-zinc-900 border-b border-zinc-800 flex items-center justify-between px-6 z-10 shrink-0">
-                    <div className="flex items-center gap-2">
-                        <div className="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center">
-                            <span className="text-white font-bold text-lg">F</span>
-                        </div>
+                    <Link to="/dashboard" className="flex items-center gap-2">
+                        <img
+                            src={logo}
+                            alt="FinTrack Logo"
+                            className="w-10 h-10 object-contain"
+                        />
                         <span className="font-bold text-zinc-100">FinTrack</span>
-                    </div>
+                    </Link>
                 </header>
 
                 {/* Scrollable Content */}
