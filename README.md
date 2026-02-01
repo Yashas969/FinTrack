@@ -74,26 +74,25 @@ This project was built to understand:
 ├── middleware # Auth & validation
 └── README.md
 
-
 ---
 
 📈 Future Enhancements
-Email verification & password reset
-Expense analytics & charts
-Monthly financial summaries
-Export data (CSV / PDF)
+- Email verification & password reset
+- Expense analytics & charts
+- Monthly financial summaries
+- Export data (CSV / PDF)
 
 
 🧠 What I Learned
-Building secure authentication systems
-Structuring scalable backend APIs
-Managing environment variables in production
-Deploying full-stack apps to cloud platforms
-Debugging real-world deployment issues
+- Building secure authentication systems
+- Structuring scalable backend APIs
+- Managing environment variables in production
+- Deploying full-stack apps to cloud platforms
+- Debugging real-world deployment issues
 
 🤝 Contributing
-Contributions are welcome.
-Feel free to fork the repository and open a pull request.
+- Contributions are welcome.
+- Feel free to fork the repository and open a pull request.
 
 📄 License
-This project is developed for learning, portfolio, and educational purposes
+- This project is developed for learning, portfolio, and educational purposes
