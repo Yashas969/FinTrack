@@ -48,8 +48,8 @@ const Layout = () => {
 
                 <nav className="flex-1 flex flex-col gap-2">
                     <SidebarItem to="/home" icon={LayoutDashboard} label="Home" />
-                    <SidebarItem to="/dashboard" icon={TrendingUp} label="Dashboard" />
-                    <SidebarItem to="/income" icon={Wallet} label="Income" />
+                    <SidebarItem to="/dashboard" icon={Wallet} label="Dashboard" />
+                    <SidebarItem to="/income" icon={TrendingUp} label="Income" />
                     <SidebarItem to="/expense" icon={TrendingDown} label="Expenses" />
                     <SidebarItem to="/profile" icon={User} label="Profile" />
                 </nav>
