@@ -1,7 +1,7 @@
 # FinTrack 💰  
 A full-stack personal finance tracker built to help users manage income and expenses securely and efficiently.
 
-🔗 Live Demo: https://fintrack-iota-lovat.vercel.app/ 
+🔗 Live Demo: https://fintrack-se.vercel.app/ 
 📦 GitHub Repository: https://github.com/Yashas969/FinTrack
 
 ---
