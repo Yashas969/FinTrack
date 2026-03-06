@@ -1,4 +1,4 @@
-# FinTrack 💰  
+# FinTrack  
 A full-stack personal finance tracker built to help users manage income and expenses securely and efficiently.
 
 🔗 Live Demo: https://fintrack-se.vercel.app/ 
@@ -6,7 +6,7 @@ A full-stack personal finance tracker built to help users manage income and expe
 
 ---
 
-## 📖 About the Project
+##  About the Project
 FinTrack is a production-ready web application designed for students and beginners to track their personal finances.  
 The project focuses on **secure authentication**, **clean UI**, and **scalable backend architecture**, following real-world development practices.
 
@@ -18,7 +18,7 @@ This project was built to understand:
 
 ---
 
-## 🎯 Key Features
+##  Key Features
 - Secure user authentication (JWT-based)
 - Email format validation
 - Add, view, and delete income records
@@ -29,7 +29,7 @@ This project was built to understand:
 
 ---
 
-## 🧑‍💻 Tech Stack
+##  Tech Stack
 
 ### Frontend
 - React / Next.js
@@ -57,7 +57,7 @@ This project was built to understand:
 
 ---
 
-## 🔐 Authentication & Security
+##  Authentication & Security
 - Passwords are hashed before storage
 - JWT tokens are used for session management
 - Protected routes prevent unauthorized access
@@ -66,7 +66,7 @@ This project was built to understand:
 
 ---
 
-## 🗂️ Project Structure
+##  Project Structure
 ├── client / app # Frontend UI
 ├── server / api # Backend routes
 ├── models # Database schemas
@@ -76,14 +76,14 @@ This project was built to understand:
 
 ---
 
-📈 Future Enhancements
+ Future Enhancements
 - Email verification 
 - Expense analytics & charts
 - Monthly financial summaries
 - Export data (CSV / PDF)
 
 
-🧠 What I Learned
+ What I Learned
 - Building secure authentication systems
 - Structuring scalable backend APIs
 - Managing environment variables in production
@@ -91,5 +91,5 @@ This project was built to understand:
 - Debugging real-world deployment issues
 
 
-📄 License
+ License
 - This project is developed for learning, portfolio, and educational purposes
