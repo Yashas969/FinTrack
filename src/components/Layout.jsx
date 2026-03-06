@@ -55,7 +55,7 @@ const Layout = () => {
                 </nav>
 
                 <div className="mt-auto border-t border-zinc-800 pt-6">
-                    <button
+                    <button 
                         onClick={handleLogout}
                         className="flex items-center gap-3 px-4 py-3 w-full rounded-xl text-zinc-400 hover:bg-rose-500/10 hover:text-rose-500 transition-colors"
                     >
