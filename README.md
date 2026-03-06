@@ -77,7 +77,7 @@ This project was built to understand:
 ---
 
 📈 Future Enhancements
-- Email verification & password reset
+- Email verification 
 - Expense analytics & charts
 - Monthly financial summaries
 - Export data (CSV / PDF)
@@ -90,9 +90,6 @@ This project was built to understand:
 - Deploying full-stack apps to cloud platforms
 - Debugging real-world deployment issues
 
-🤝 Contributing
-- Contributions are welcome.
-- Feel free to fork the repository and open a pull request.
 
 📄 License
 - This project is developed for learning, portfolio, and educational purposes
